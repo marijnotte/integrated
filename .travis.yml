@@ -5,6 +5,7 @@ php:
   - hhvm
 before_install:
   - npm install -g bower
+  - npm install -g less
   - bower install
   - echo "extension = mongo.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - composer install
