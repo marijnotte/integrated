@@ -3,9 +3,12 @@ php:
   - 5.5
   - 5.4
   - hhvm
+services:
+  - mongodb
 before_install:
   - npm install -g bower
   - npm install -g less
   - bower install
   - echo "extension = mongo.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - mysql -e 'create database integrated;'
   - composer install
