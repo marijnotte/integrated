@@ -4,8 +4,7 @@ php:
   - 5.4
   - hhvm
 before_install:
-  - echo "extension = mongo.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  - composer install
-before_script:
   - npm install -g bower
   - bower install
+  - echo "extension = mongo.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+  - composer install
